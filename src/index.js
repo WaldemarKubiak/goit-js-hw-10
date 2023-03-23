@@ -25,7 +25,7 @@ function eventHandler(e) {
     fetchCountries(countryName)
       .then(countries => renderCountries(countries))
       .catch(error => backendErr(error));
-    // console.log('Backend err: ', error));
+    // => console.log('Backend err: ', error));
   }
 }
 
@@ -68,13 +68,13 @@ function renderCountryCard(countries) {
       }" width="70" height="40"/>
       <h1 class="country-info__name">${country.name.official}</h1>
     </div>
-    <p class="country-info__description"><b>Capital: </b><span class="">${
+    <p class="country-info__description"><b>Capital: </b><span>${
       country.capital
     }</span></p>
-    <p class="country-info__description"><b>Population: </b><span class="">${
+    <p class="country-info__description"><b>Population: </b><span>${
       country.population
     }</span></p>
-    <p class="country-info__description"><b>Languages: </b><span class="">${Object.values(
+    <p class="country-info__description"><b>Languages: </b><span>${Object.values(
       country.languages
     ).join(', ')}</span></p>`;
     })

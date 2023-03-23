@@ -7,6 +7,5 @@ const fetchCountries = name => {
     }
     return resp.json();
   });
-  // .catch(error => console.log(error));
 };
 export { fetchCountries };
